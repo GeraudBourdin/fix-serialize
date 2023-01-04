@@ -28,7 +28,7 @@ class FixUnSerializeTest extends TestCase
         $this->assertNotTrue($this->unserializeService->isValid(self::INVALID_STRING));
     }
 
-    public function testFixIfInvalidTrue()
+    public function testFixIfInvalidWithValidString()
     {
         $this->assertEquals(
             self::VALID_STRING,
@@ -36,7 +36,7 @@ class FixUnSerializeTest extends TestCase
         );
     }
 
-    public function testFixIfInvalidFalse()
+    public function testFixIfInvalidWithInvalidString()
     {
         $this->assertEquals(
             self::VALID_STRING,
